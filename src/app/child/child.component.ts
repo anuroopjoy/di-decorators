@@ -20,7 +20,7 @@ export class ChildComponent implements OnInit {
   @Input() id!: string;
   constructor(
     @SkipSelf() private logger: LoggerService,
-    @Optional() @Host() private serviceLogger?: LoggerService
+    @Optional() @Self() private serviceLogger?: LoggerService
   ) {}
 
   ngOnInit(): void {
